@@ -51,7 +51,8 @@ def mpl_plot(filename, outputdata, dt, rxnumber, rxcomponent):
                vmin=-np.amax(np.abs(outputdata)), vmax=np.amax(np.abs(outputdata)))
     plt.xlabel('Trace number')
     plt.ylabel('Time [s]')
-    # plt.title('{}'.format(filename))
+    plt.title(filename)
+  
 
     # Grid properties
     ax = fig.gca()
@@ -66,12 +67,13 @@ def mpl_plot(filename, outputdata, dt, rxnumber, rxcomponent):
         cb.set_label('Current [A]')
 
     # Save a PDF/PNG of the figure
-    # savefile = os.path.splitext(filename)[0]
+     #savefile = os.path.splitext(filename)[0]
     # fig.savefig(path + os.sep + savefile + '.pdf', dpi=None, format='pdf', 
     #             bbox_inches='tight', pad_inches=0.1)
-    # fig.savefig(path + os.sep + savefile + '.png', dpi=150, format='png', 
-    #             bbox_inches='tight', pad_inches=0.1)
-
+     #fig.savefig(path + os.sep + savefile + '.png', dpi=150, format='png',bbox_inches='tight', pad_inches=0.1)
+        
+    plt.savefig(path + os.sep + filename +'_plot.png')
+    
     return plt
 
 
