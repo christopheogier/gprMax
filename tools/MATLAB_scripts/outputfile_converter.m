@@ -518,7 +518,7 @@ elseif gpr_format == 3
     HDR.comment               = zeros(1, 28);                   % Comment
 
     % HD file
-    fid = fopen([HDR.fname '.hd'], 'w');
+    fid = fopen([path HDR.fname '.hd'], 'w');
     fprintf(fid, '%i\r\n', HDR.file_tag);
     fprintf(fid, 'Data Collected with %s\r\n', HDR.system);
     fprintf(fid, '%s\r\n', HDR.date);
@@ -544,7 +544,7 @@ elseif gpr_format == 3
     fclose(fid);
 
     % DT1 file
-    fid = fopen([HDR.fname '.dt1'], 'w');
+    fid = fopen([path HDR.fname '.dt1'], 'w');
     for i = 1 : HDR.num_trac
         fwrite(fid, HDR.num_each_trac(i), 'real*4');
         fwrite(fid, HDR.position(i), 'real*4');
