@@ -16,6 +16,6 @@
 
 #box: 0 0 0 50 30 0.1 ice
 #sphere: 25 2 0 3 fresh_water
-#geometry_objects_read: 0 0 0 ../../user_models/waterpocket_realbed_2D/bed.h5  ../../user_models/waterpocket_realbed_2D/bed_materials.txt
+#geometry_objects_read: 0 0 0 ../../user_models/waterpocket_realbed_2D/bed2D.h5  ../../user_models/waterpocket_realbed_2D/bed_materials.txt
 
 #geometry_view: 0 0 0 50 40 0.1 0.1 0.1 0.1 waterpocket_realbed n

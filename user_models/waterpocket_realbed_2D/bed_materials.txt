@@ -1,2 +1,0 @@
-#material: 6 0.001 1 0 granite
-

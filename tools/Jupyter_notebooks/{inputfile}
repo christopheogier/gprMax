@@ -1,0 +1,23 @@
+#title: B-scan from a spherical water pocket buried in a 2D-glacier
+#domain: 100 100 0.1
+#dx_dy_dz: 0.1 0.1 0.1
+#time_window: 1100e-9
+
+#material: 3.2 5e-8 1 0 ice
+#material: 6 0.001 1 0 granite
+#material: 80 5e-4 1 0 fresh_water
+#material: 2.3 1e-4 1 0 wet_snow
+
+
+#waveform: ricker 1 25e6 my_ricker
+#hertzian_dipole: z 1 92.5 0 my_ricker
+#rx: 5 92.5 0
+#src_steps: 0.5 0 0
+#rx_steps: 0.5 0 0
+
+
+#box: 0 0 0 100 90 0.1 ice
+#box: 0 90 0 100 92 0.1 wet_snow
+#sphere: -92.9 33.8 0 105.4 fresh_water
+#sphere: -81.3 3.88 0 105.4 fresh_water
+#geometry_objects_read: 0 0 0 ../gprMax_data/wp_test_2D/bed_expo.h5  ../gprMax_data/wp_test_2D/bed_materials.txt

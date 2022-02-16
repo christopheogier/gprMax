@@ -1,0 +1,30 @@
+#title: B-scan from a spherical water pocket buried in a 2D-glacier
+#domain: 100 100 0.1
+#dx_dy_dz: 0.1 0.1 0.1
+#time_window: 1100e-9
+
+#material: 3.2 5e-8 1 0 ice
+#material: 6 0.001 1 0 granite
+#material: 80 5e-4 1 0 fresh_water
+
+
+#waveform: ricker 1 25e6 my_ricker
+#hertzian_dipole: z 1 90.5 0 my_ricker
+#rx: 5 90.5 0
+#src_steps: 0.5 0 0
+#rx_steps: 0.5 0 0
+
+
+#box: 0 0 0 100 90 0.1 ice
+#box: 0 0 0 100 5 0.1 granite
+#sphere: fresh_water
+
+#python:
+from gprMax.input_cmd_funcs import *
+if current_model_run == 90:
+    for i in range(1, 110):
+        snapshot(0, 0, 0, 100, 100, 0.1, 0.1, 0.1, 0.1, i*10e-9, 'snapshot' + str(i))
+    
+    geometry_view(0, 0, 0, 100, 100, 0.1, 0.1, 0.1, 0.1,'wp', 'n')  
+    
+#end_python:
