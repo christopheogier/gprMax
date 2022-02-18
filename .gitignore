@@ -20,3 +20,9 @@ dist/
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+# ignore .h5 file (too big)
+*/*.h5
+
+# ignore .vti file (too big)
+*/*.vti
