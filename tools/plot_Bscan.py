@@ -48,7 +48,9 @@ def mpl_plot(filename, outputdata, dt, rxnumber, rxcomponent):
     plt.imshow(outputdata, 
                extent=[0, outputdata.shape[1], outputdata.shape[0] * dt, 0], 
                interpolation='nearest', aspect='auto', cmap='seismic', 
-               vmin=-np.amax(np.abs(outputdata)), vmax=np.amax(np.abs(outputdata)))
+               vmin=-5, vmax=5)
+    #for automatic colorbar limits with min and max:
+    # vmin=-np.amax(np.abs(outputdata)), vmax=np.amax(np.abs(outputdata))
     plt.xlabel('Trace number')
     plt.ylabel('Time [s]')
     plt.title(filename)
